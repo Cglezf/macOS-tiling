@@ -16,7 +16,10 @@ Cada tarea se cierra con lo medido en el Mac (versión, comando y salida), no co
 - [ ] 2.1 AeroSpace desde el zip en `~/Applications` y `~/.local/bin`; anotar la versión.
 - [ ] 2.2 Compilar SketchyBar con `make`: objetivo, ruta del binario, tiempo.
 - [ ] 2.3 Compilar JankyBorders con `make`: objetivo, ruta del binario, tiempo.
-- [ ] 2.4 Escribir `scripts/install.sh` (bash 3.2, idempotente) con lo medido en 2.1 a 2.3.
+- [ ] 2.4 Escribir `scripts/install-aerospace.sh`, `scripts/build-sketchybar.sh` y
+
+  `scripts/build-borders.sh` con lo medido en 2.1 a 2.3, y `versions.toml` con las
+  versiones (reglas del README).
 
 ## 3. AeroSpace
 
@@ -71,4 +74,13 @@ Cada tarea se cierra con lo medido en el Mac (versión, comando y salida), no co
   (README, «En la cuenta principal»).
 
 - [ ] 8.2 Una semana de uso sin tocar la configuración.
-- [ ] 8.3 Pasar a dotfiles y archivar este repo (README, «Integración en dotfiles»).
+- [ ] 8.3 Pasar a dotfiles y archivar este repo (README, «Cómo se hace el traslado»).
+
+## Atajos
+
+Cada atajo de `aerospace.toml` se anota aquí con su equivalente de mango
+(`config/main/keybinds.csv` de dotfiles). Es la tabla que se cruza al trasladar.
+
+| Atajo en macOS | Acción de AeroSpace | Fila de mango |
+| --- | --- | --- |
+| (vacía hasta la tarea 3.1) | | |

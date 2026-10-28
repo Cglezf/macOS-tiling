@@ -4,8 +4,8 @@ Cada tarea se cierra con lo medido en el Mac (versión, comando y salida), no co
 
 ## 1. Preparar la sandbox
 
-- [ ] 1.1 Crear la cuenta estándar `tiling` en la M2P.
-- [ ] 1.2 `gh auth login` y clonar este repo en `~/Repos/macos-tiling` de esa cuenta.
+- [ ] 1.1 Crear la cuenta estándar `tiling` en el Mac.
+- [ ] 1.2 `gh auth login` y clonar este repo en `~/Repos/macOS-tiling` de esa cuenta.
 - [ ] 1.3 Comprobar las Command Line Tools: `xcode-select -p`.
 - [ ] 1.4 Instalar en esa cuenta lo mínimo para trabajar (kitty, una fuente mono) y anotarlo
 
@@ -40,7 +40,7 @@ Cada tarea se cierra con lo medido en el Mac (versión, comando y salida), no co
 ## 4. SketchyBar
 
 - [ ] 4.1 Escritorios de AeroSpace en la barra (idea: `items/spaces.sh` de omerxx).
-- [ ] 4.2 Decidir entre ocultar la barra nativa o convivir con ella (la M2P tiene muesca).
+- [ ] 4.2 Decidir entre ocultar la barra nativa o convivir con ella (en un Mac con muesca).
 - [ ] 4.3 iStat Menus: probar los alias de SketchyBar (`--add alias`) frente a plugins
 
   propios de CPU, memoria y batería.

@@ -1,4 +1,4 @@
-# macos-tiling
+# macOS-tiling
 
 Laboratorio para llevar a macOS una forma de trabajo cercana a la de mango en Linux:
 escritorios por teclado, ventanas en mosaico, una barra propia y bordes de foco. Vive
@@ -67,7 +67,7 @@ que nada de lo que se rompa allí llega a la cuenta de trabajo ni al repo dotfil
 2. Entrar en esa cuenta y abrir una terminal.
 3. Dar acceso a GitHub en esa cuenta (`gh auth login`) y clonar:
 
-   `git clone https://github.com/<usuario>/macos-tiling ~/Repos/macos-tiling`.
+   `git clone https://github.com/<usuario>/macOS-tiling ~/Repos/macOS-tiling`.
 
 4. `xcode-select -p` debe responder una ruta; si no, `xcode-select --install`.
 5. Instalar AeroSpace desde el zip (sección siguiente) y enlazar la configuración.
@@ -88,7 +88,7 @@ decenas de GB y la aceleración gráfica es limitada.
 
 ## En la cuenta principal (cuando ya funcione en la de prueba)
 
-En la M2P `~/.config` es el repo dotfiles y su sincronización commitea lo que aparece en
+En el Mac de trabajo `~/.config` es el repo dotfiles y su sincronización commitea lo que aparece en
 `config/`. Para que los enlaces del laboratorio no suban a dotfiles:
 
 1. Añadir a `~/Repos/dotfiles/.git/info/exclude` (local, no versionado):
@@ -103,7 +103,7 @@ En la M2P `~/.config` es el repo dotfiles y su sincronización commitea lo que a
 
    ```zsh
    for app in aerospace sketchybar borders; do
-       ln -sfn ~/Repos/macos-tiling/config/$app ~/.config/$app
+       ln -sfn ~/Repos/macOS-tiling/config/$app ~/.config/$app
    done
    ```
 

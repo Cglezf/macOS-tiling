@@ -41,6 +41,13 @@ Cada tarea se cierra con lo medido en el Mac (versión, comando y salida), no co
   `windowrules.csv` de dotfiles (Zed en el 3).
 
 - [ ] 3.4 Probar con dos pantallas: escritorios por monitor.
+- [ ] 3.5 Junto a la 3.2, probar en la cuenta `tiling` OmniWM frente a AeroSpace: trae
+
+  scroller (estilo niri) y dwindle (estilo Hyprland) por escritorio, como mango; TOML en
+  `~/.config/omniwm/`, zip de Releases, macOS 26+. Glide como segundo candidato (TOML en
+  `~/.config/glide/`, usa los Spaces nativos). Si gana otro, cambian la 7.1, el bloque 4
+  (OmniWM trae barra) y quizá sobra JankyBorders: decidirlo antes de escribir
+  configuración.
 
 ## 4. SketchyBar
 
@@ -66,7 +73,8 @@ Cada tarea se cierra con lo medido en el Mac (versión, comando y salida), no co
 
 - [ ] 7.1 `com.apple.spaces spans-displays` en `true` (desactiva «Displays have separate
 
-  Spaces»; pide cerrar sesión).
+  Spaces»; pide cerrar sesión). Depende de la 3.5: OmniWM y Glide piden lo contrario
+  («Displays have separate Spaces» activado).
 
 - [ ] 7.2 `com.apple.dock expose-group-apps` en `true` (ya está en dotfiles).
 - [ ] 7.3 Ocultar la barra nativa, si se decide en 4.2.

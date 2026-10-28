@@ -160,6 +160,12 @@ Homebrew, así que esta parte no está documentada por los autores.
 | [Discusión 598 de SketchyBar](https://github.com/FelixKratz/SketchyBar/discussions/598) | Cómo mostrar los escritorios de AeroSpace |
 | [Issue 430 de AeroSpace](https://github.com/nikitabobko/AeroSpace/issues/430) | Por qué mostrar los escritorios vacíos vuelve lento el aviso |
 | [Wimi](https://github.com/nick-friedrich/wimi-releases) y su [video](https://www.youtube.com/watch?v=WcS2jn647sI) | Solo ideas: código cerrado, sin archivo de configuración y de pago en la 1.0. Cajón lateral que junta cambiador de ventanas con vista previa, plantillas de acomodo, lanzador e hyper key (Bloq Mayús como Ctrl+Opt+Cmd) |
+| [OmniWM](https://github.com/BarutSRB/OmniWM) | Candidato frente a AeroSpace (tarea 3.5): GPL-2.0, scroller estilo niri y dwindle estilo Hyprland por escritorio, barra propia, TOML en `~/.config/omniwm/`, zip de Releases, macOS 26+. Pide «Displays have separate Spaces» activado |
+| [Glide](https://github.com/glide-wm/glide) ([web](https://glidewm.org/)) | Segundo candidato (tarea 3.5): Rust, MIT o Apache-2.0, TOML en `~/.config/glide/`, DMG en Releases. Trabaja sobre los Spaces nativos y se activa por escritorio |
+| [HyprMac de zacharytgray](https://github.com/zacharytgray/HyprMac) | Solo ideas: dwindle propio en Swift, MIT; enlace con SketchyBar por `state.json` y `hyprmac://`. Configuración JSON fuera de XDG |
+| [HyprSpace de Li-RC](https://github.com/Li-RC/HyprSpace) | Solo ideas: fork de AeroSpace (v0.1.0, sin notarizar) con dwindle, pestañas, tira de escritorios y bordes |
+| [Fork dwindle de LDGerrits](https://github.com/LDGerrits/AeroSpace) | Solo ideas: `new-window-split = 'dwindle'` sobre AeroSpace; sin binarios ni PR al original |
+| [aether](https://github.com/viniciusbregoli/aether) y [skyland](https://github.com/waxdred/skyland) | Solo ideas: el modelo de AeroSpace con dwindle, animaciones y borde del foco. aether no declara licencia |
 | [Hyperkey](https://hyperkey.app/) | Hyper key en una app pequeña y gratuita, alternativa a Karabiner para la tarea 9.1. Ojo: un reporte de [MacGeneration](https://www.macg.co/macos/2026/02/macos-264-peut-bloquer-les-methodes-traditionnelles-pour-activer-lhyper-key-307029) dice que las betas de macOS 26.4 rompían los métodos tradicionales |
 
 ## Reglas para que el traslado a dotfiles sea transparente

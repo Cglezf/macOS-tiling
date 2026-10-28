@@ -159,6 +159,8 @@ Homebrew, así que esta parte no está documentada por los autores.
 | [omarchy-mac](https://gitea.com/icameheretodance/omarchy-mac) | Solo ideas: no se instala |
 | [Discusión 598 de SketchyBar](https://github.com/FelixKratz/SketchyBar/discussions/598) | Cómo mostrar los escritorios de AeroSpace |
 | [Issue 430 de AeroSpace](https://github.com/nikitabobko/AeroSpace/issues/430) | Por qué mostrar los escritorios vacíos vuelve lento el aviso |
+| [Wimi](https://github.com/nick-friedrich/wimi-releases) y su [video](https://www.youtube.com/watch?v=WcS2jn647sI) | Solo ideas: código cerrado, sin archivo de configuración y de pago en la 1.0. Cajón lateral que junta cambiador de ventanas con vista previa, plantillas de acomodo, lanzador e hyper key (Bloq Mayús como Ctrl+Opt+Cmd) |
+| [Hyperkey](https://hyperkey.app/) | Hyper key en una app pequeña y gratuita, alternativa a Karabiner para la tarea 9.1. Ojo: un reporte de [MacGeneration](https://www.macg.co/macos/2026/02/macos-264-peut-bloquer-les-methodes-traditionnelles-pour-activer-lhyper-key-307029) dice que las betas de macOS 26.4 rompían los métodos tradicionales |
 
 ## Reglas para que el traslado a dotfiles sea transparente
 

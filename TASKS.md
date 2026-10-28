@@ -93,6 +93,9 @@ y se dice qué le faltó.
   Raycast.
 
 - [ ] 9.4 AltTab, para evaluarlo durante la semana de uso (8.2).
+- [ ] 9.5 Leader Key, solo si en 8.2 Spotlight se queda corto para lanzar apps, URL y
+
+  carpetas sin el ratón; antes que Raycast. Lo de AeroSpace va en sus modos de atajos.
 
 ## Atajos
 

@@ -1,9 +1,6 @@
 # macOS-tiling
 
-Laboratorio para llevar a macOS una forma de trabajo cercana a la de mango en Linux:
-escritorios por teclado, ventanas en mosaico, una barra propia y bordes de foco. Vive
-aparte de `~/Repos/dotfiles` mientras se configura. Cuando esté maduro, su
-configuración pasa a dotfiles y este repo se archiva.
+Laboratorio para llevar a macOS una forma de trabajo cercana a la de mango en Linux: escritorios por teclado, ventanas en mosaico, una barra propia y bordes de foco. Vive aparte de `~/Repos/dotfiles` mientras se configura. Cuando esté maduro, su configuración pasa a dotfiles y este repo se archiva.
 
 ## Piezas
 
@@ -15,33 +12,12 @@ configuración pasa a dotfiles y este repo se archiva.
 
 ## Principios
 
-1. **Sin Homebrew.** AeroSpace se instala desde su zip oficial. SketchyBar y
-
-   JankyBorders se compilan desde el código fuente con `make` o `cmake` y las Command
-   Line Tools de Xcode (`xcode-select --install`).
-
-2. **Otros dotfiles solo dan ideas.** omarchy-mac y las configuraciones de la tabla de
-
-   referencias se leen, no se instalan ni se copian enteros: instalan paquetes al gusto
-   de su autor. Lo que se tome se reescribe aquí y se dice de dónde salió.
-
-3. **Este repo solo guarda configuración y scripts de construcción.** No escribe
-
-   `defaults` de macOS, no toca `~/Repos/dotfiles` y no instala nada fuera de las rutas
-   de la sección «Dónde queda cada cosa».
-
-4. **Los `defaults` de macOS son de dotfiles.** Los cambia el usuario a mano en el Mac y
-
-   el respaldo de dotfiles los captura en `config/defaults/keys.toml`. Aquí solo se
-   anotan en `TASKS.md` los que hagan falta.
-
-5. **XDG estricto.** AeroSpace lee `~/.config/aerospace/aerospace.toml`; nunca
-
-   `~/.aerospace.toml`, que además provoca un error de ambigüedad si existen los dos.
-
-6. **Shell en zsh** y scripts que corran con el bash 3.2 del sistema, igual que en
-
-   dotfiles.
+1. **Sin Homebrew.** AeroSpace se instala desde su zip oficial. SketchyBar y JankyBorders se compilan desde el código fuente con `make` o `cmake` y las Command Line Tools de Xcode (`xcode-select --install`).
+2. **Otros dotfiles solo dan ideas.** omarchy-mac y las configuraciones de la tabla de referencias se leen, no se instalan ni se copian enteros: instalan paquetes al gusto de su autor. Lo que se tome se reescribe aquí y se dice de dónde salió.
+3. **Este repo solo guarda configuración y scripts de construcción.** No escribe `defaults` de macOS, no toca `~/Repos/dotfiles` y no instala nada fuera de las rutas de la sección «Dónde queda cada cosa».
+4. **Los `defaults` de macOS son de dotfiles.** Los cambia el usuario a mano en el Mac y el respaldo de dotfiles los captura en `config/defaults/keys.toml`. Aquí solo se anotan en `TASKS.md` los que hagan falta.
+5. **XDG estricto.** AeroSpace lee `~/.config/aerospace/aerospace.toml`; nunca `~/.aerospace.toml`, que además provoca un error de ambigüedad si existen los dos.
+6. **Shell en zsh** y scripts que corran con el bash 3.2 del sistema, igual que en dotfiles.
 
 ## Dónde queda cada cosa
 
@@ -55,41 +31,23 @@ configuración pasa a dotfiles y este repo se archiva.
 
 ## Sandbox: una cuenta de macOS de prueba (recomendado)
 
-AeroSpace mueve todas las ventanas de la sesión y pide permiso de Accesibilidad; no hay
-forma de probarlo en un contenedor. La sandbox real es **otra cuenta de usuario de
-macOS**: tiene su propio `~/.config`, sus propios `defaults` y sus propios permisos, así
-que nada de lo que se rompa allí llega a la cuenta de trabajo ni al repo dotfiles.
+AeroSpace mueve todas las ventanas de la sesión y pide permiso de Accesibilidad; no hay forma de probarlo en un contenedor. La sandbox real es **otra cuenta de usuario de macOS**: tiene su propio `~/.config`, sus propios `defaults` y sus propios permisos, así que nada de lo que se rompa allí llega a la cuenta de trabajo ni al repo dotfiles.
 
-1. Ajustes del Sistema > Usuarios y grupos > Añadir usuario: cuenta **Estándar**,
-
-   nombre `tiling`.
-
+1. Ajustes del Sistema > Usuarios y grupos > Añadir usuario: cuenta **Estándar**, nombre `tiling`.
 2. Entrar en esa cuenta y abrir una terminal.
-3. Dar acceso a GitHub en esa cuenta (`gh auth login`) y clonar:
-
-   `git clone https://github.com/<usuario>/macOS-tiling ~/Repos/macOS-tiling`.
-
+3. Dar acceso a GitHub en esa cuenta (`gh auth login`) y clonar: `git clone https://github.com/<usuario>/macOS-tiling ~/Repos/macOS-tiling`.
 4. `xcode-select -p` debe responder una ruta; si no, `xcode-select --install`.
 5. Instalar AeroSpace desde el zip (sección siguiente) y enlazar la configuración.
-6. Conceder Accesibilidad a AeroSpace y, si se usan alias de la barra nativa, Grabación
+6. Conceder Accesibilidad a AeroSpace y, si se usan alias de la barra nativa, Grabación de pantalla a SketchyBar (Ajustes del Sistema > Privacidad y seguridad).
+7. Al terminar una sesión de pruebas: commit y push desde la cuenta `tiling`, y `git pull` en la cuenta principal cuando haga falta.
 
-   de pantalla a SketchyBar (Ajustes del Sistema > Privacidad y seguridad).
+En esa cuenta no se instala dotfiles. Lo que haga falta de él (fuente, kitty) se instala a mano y se anota en `TASKS.md` como dependencia para la integración.
 
-7. Al terminar una sesión de pruebas: commit y push desde la cuenta `tiling`, y
-
-   `git pull` en la cuenta principal cuando haga falta.
-
-En esa cuenta no se instala dotfiles. Lo que haga falta de él (fuente, kitty) se instala
-a mano y se anota en `TASKS.md` como dependencia para la integración.
-
-Alternativa más pesada: una máquina virtual de macOS con [UTM](https://mac.getutm.app/)
-o [Tart](https://tart.run/). Sirve para probar una instalación desde cero, pero ocupa
-decenas de GB y la aceleración gráfica es limitada.
+Alternativa más pesada: una máquina virtual de macOS con [UTM](https://mac.getutm.app/) o [Tart](https://tart.run/). Sirve para probar una instalación desde cero, pero ocupa decenas de GB y la aceleración gráfica es limitada.
 
 ## En la cuenta principal (cuando ya funcione en la de prueba)
 
-En el Mac de trabajo `~/.config` es el repo dotfiles y su sincronización commitea lo que aparece en
-`config/`. Para que los enlaces del laboratorio no suban a dotfiles:
+En el Mac de trabajo `~/.config` es el repo dotfiles y su sincronización commitea lo que aparece en `config/`. Para que los enlaces del laboratorio no suban a dotfiles:
 
 1. Añadir a `~/Repos/dotfiles/.git/info/exclude` (local, no versionado):
 
@@ -109,8 +67,7 @@ En el Mac de trabajo `~/.config` es el repo dotfiles y su sincronización commit
 
 3. Comprobar en dotfiles que `git status --short` no muestra nada nuevo.
 
-Al integrar en dotfiles se quitan esas tres líneas de `exclude` y los enlaces, y la
-configuración entra como archivos normales de `config/`.
+Al integrar en dotfiles se quitan esas tres líneas de `exclude` y los enlaces, y la configuración entra como archivos normales de `config/`.
 
 ## Instalar AeroSpace sin Homebrew
 
@@ -135,16 +92,11 @@ make -C build/SketchyBar
 make -C build/JankyBorders
 ```
 
-Pendiente de medir en el Mac: el nombre exacto de los objetivos de `make` y la ruta del
-binario que dejan (tareas 2.2 y 2.3 de `TASKS.md`). Su instalación oficial es un tap de
-Homebrew, así que esta parte no está documentada por los autores.
+Pendiente de medir en el Mac: el nombre exacto de los objetivos de `make` y la ruta del binario que dejan (tareas 2.2 y 2.3 de `TASKS.md`). Su instalación oficial es un tap de Homebrew, así que esta parte no está documentada por los autores.
 
 ## Cómo se conectan
 
-- AeroSpace avisa a la barra al cambiar de escritorio con `exec-on-workspace-change` y
-
-  `sketchybar --trigger aerospace_workspace_change`.
-
+- AeroSpace avisa a la barra al cambiar de escritorio con `exec-on-workspace-change` y `sketchybar --trigger aerospace_workspace_change`.
 - La barra pregunta el escritorio activo con `aerospace list-workspaces --focused`.
 - JankyBorders se lanza desde `after-startup-command` de AeroSpace.
 
@@ -171,119 +123,52 @@ Homebrew, así que esta parte no está documentada por los autores.
 
 ## Reglas para que el traslado a dotfiles sea transparente
 
-Todo lo de este repo se escribe ya con las convenciones de `~/Repos/dotfiles`. Así el
-traslado es copiar directorios, no reescribirlos. Si una regla no se puede cumplir, se
-anota en `TASKS.md` con su motivo antes de seguir.
+Todo lo de este repo se escribe ya con las convenciones de `~/Repos/dotfiles`. Así el traslado es copiar directorios, no reescribirlos. Si una regla no se puede cumplir, se anota en `TASKS.md` con su motivo antes de seguir.
 
 ### Estructura
 
-1. **La configuración vive en `config/<app>/`** con el mismo nombre que tendrá en
-
-   dotfiles: `config/aerospace/aerospace.toml`, `config/sketchybar/sketchybarrc`,
-   `config/borders/bordersrc`. Nada en la raíz del repo ni en `~/.aerospace.toml`.
-
-2. **Los scripts de instalación van en `scripts/`**, uno por pieza (`install-aerospace.sh`,
-
-   `build-sketchybar.sh`, `build-borders.sh`). En dotfiles pasarán a `install/`.
-
-3. **Lo que la barra ejecuta va dentro de `config/sketchybar/`** (`items/`, `plugins/`),
-
-   porque al trasladar se copia el directorio entero.
+1. **La configuración vive en `config/<app>/`** con el mismo nombre que tendrá en dotfiles: `config/aerospace/aerospace.toml`, `config/sketchybar/sketchybarrc`, `config/borders/bordersrc`. Nada en la raíz del repo ni en `~/.aerospace.toml`.
+2. **Los scripts de instalación van en `scripts/`**, uno por pieza (`install-aerospace.sh`, `build-sketchybar.sh`, `build-borders.sh`). En dotfiles pasarán a `install/`.
+3. **Lo que la barra ejecuta va dentro de `config/sketchybar/`** (`items/`, `plugins/`), porque al trasladar se copia el directorio entero.
 
 ### Datos fuera del código
 
-1. **Versiones y URL en un solo archivo de datos**, `versions.toml` (versión de AeroSpace,
-
-   etiqueta o commit de SketchyBar y JankyBorders). En dotfiles pasan a sus tablas; los
-   scripts nunca llevan una versión escrita dentro.
-
-2. **Colores en un solo archivo**, `config/sketchybar/colors.sh`, con la paleta Breeze
-
-   Dark de dotfiles. JankyBorders y AeroSpace no repiten un color: lo toman de ahí o
-   llevan un comentario que diga de qué variable sale.
-
-3. **Atajos en un solo sitio**, el bloque `[mode.main.binding]` de `aerospace.toml`, con un
-
-   comentario por grupo. Cada atajo se anota en la tabla «Atajos» de `TASKS.md` con su
-   equivalente de mango; esa tabla es la que se cruza con `config/main/keybinds.csv`.
-
-4. **Sin rutas de usuario escritas**: `$HOME`, `~` o `${XDG_CONFIG_HOME:-$HOME/.config}`,
-
-   nunca `/Users/<nombre>`. El pre-commit de dotfiles rechaza esas rutas.
+1. **Versiones y URL en un solo archivo de datos**, `versions.toml` (versión de AeroSpace, etiqueta o commit de SketchyBar y JankyBorders). En dotfiles pasan a sus tablas; los scripts nunca llevan una versión escrita dentro.
+2. **Colores en un solo archivo**, `config/sketchybar/colors.sh`, con la paleta Breeze Dark de dotfiles. JankyBorders y AeroSpace no repiten un color: lo toman de ahí o llevan un comentario que diga de qué variable sale.
+3. **Atajos en un solo sitio**, el bloque `[mode.main.binding]` de `aerospace.toml`, con un comentario por grupo. Cada atajo se anota en la tabla «Atajos» de `TASKS.md` con su equivalente de mango; esa tabla es la que se cruza con `config/main/keybinds.csv`.
+4. **Sin rutas de usuario escritas**: `$HOME`, `~` o `${XDG_CONFIG_HOME:-$HOME/.config}`, nunca `/Users/<nombre>`. El pre-commit de dotfiles rechaza esas rutas.
 
 ### Scripts
 
-1. **bash 3.2**, el de macOS, con `#!/usr/bin/env bash`: sin `declare -A`, `mapfile`,
-
-   `${var^^}` ni un `case` dentro de `$( )`.
-
-2. **Banderas BSD**: nada de `stat -c`, `date -d`, `sed -i` sin argumento ni `cp
-
-   --parents`.
-
-3. **`grep` y no `rg`** dentro de los scripts: en una máquina recién formateada `rg` aún
-
-   no existe cuando corre el bootstrap.
-
-4. **`--help` y `--dry-run`** en cada script. `--dry-run` no escribe nada y dice lo que
-
-   haría.
-
-5. **Guarda de sistema después del `--help`**: fuera de macOS dice qué falta y sale con
-
-   1, nunca con 0 en silencio.
-
-6. **Idempotentes**: una segunda corrida no descarga, no compila ni copia lo que ya está
-
-   en su versión. Solo se escribe lo que difiere.
-
-7. **No mentir en la salida**: un mensaje de éxito solo después de comprobar que el
-
-   archivo o el binario existe.
+1. **bash 3.2**, el de macOS, con `#!/usr/bin/env bash`: sin `declare -A`, `mapfile`, `${var^^}` ni un `case` dentro de `$( )`.
+2. **Banderas BSD**: nada de `stat -c`, `date -d`, `sed -i` sin argumento ni `cp --parents`.
+3. **`grep` y no `rg`** dentro de los scripts: en una máquina recién formateada `rg` aún no existe cuando corre el bootstrap.
+4. **`--help` y `--dry-run`** en cada script. `--dry-run` no escribe nada y dice lo que haría.
+5. **Guarda de sistema después del `--help`**: fuera de macOS dice qué falta y sale con 1, nunca con 0 en silencio.
+6. **Idempotentes**: una segunda corrida no descarga, no compila ni copia lo que ya está en su versión. Solo se escribe lo que difiere.
+7. **No mentir en la salida**: un mensaje de éxito solo después de comprobar que el archivo o el binario existe.
 
 ### Lo que este repo nunca hace
 
-1. **Escribir `defaults`.** Los aplica el usuario a mano y dotfiles los captura en
-
-   `config/defaults/keys.toml`; aquí solo se anotan en `TASKS.md`, bloque 7.
-
+1. **Escribir `defaults`.** Los aplica el usuario a mano y dotfiles los captura en `config/defaults/keys.toml`; aquí solo se anotan en `TASKS.md`, bloque 7.
 2. **Usar Homebrew**, ni siquiera para una dependencia de compilación.
-3. **Tocar dotfiles**: ni archivos, ni ramas, ni su `.gitignore`. La única excepción es
-
-   la línea local de `.git/info/exclude` descrita arriba, que no se versiona.
-
-4. **Crear agentes de `launchd` a mano.** AeroSpace arranca la barra y los bordes con
-
-   `after-startup-command`; si hiciera falta un agente, se anota para que lo cree el
-   bootstrap.
+3. **Tocar dotfiles**: ni archivos, ni ramas, ni su `.gitignore`. La única excepción es la línea local de `.git/info/exclude` descrita arriba, que no se versiona.
+4. **Crear agentes de `launchd` a mano.** AeroSpace arranca la barra y los bordes con `after-startup-command`; si hiciera falta un agente, se anota para que lo cree el bootstrap.
 
 ### Redacción y commits
 
 1. **Prosa en español con acentos; código, claves y nombres en inglés y ASCII.**
-2. **Markdown limpio para el lint de dotfiles**: encabezados en orden, una línea en
-
-   blanco alrededor de listas, tablas y bloques de código, y bloques con lenguaje.
-
-3. **Un commit, una finalidad**, con el formato de dotfiles (`feat(aerospace): …`,
-
-   `fix(sketchybar): …`, `docs: …`), en español y sin ninguna atribución.
-
+2. **Markdown limpio para el lint de dotfiles**: encabezados en orden, una línea en blanco alrededor de listas, tablas y bloques de código, bloques con lenguaje, y un párrafo o una viñeta por línea física.
+3. **Un commit, una finalidad**, con el formato de dotfiles (`feat(aerospace): …`, `fix(sketchybar): …`, `docs: …`), en español y sin ninguna atribución.
 4. **Sin secretos**: ni tokens, ni llaves, ni nombres de red.
 
 ### Cómo se hace el traslado
 
-Criterio para darlo por terminado: una semana de uso en la cuenta principal sin tocar la
-configuración. Entonces:
+Criterio para darlo por terminado: una semana de uso en la cuenta principal sin tocar la configuración. Entonces:
 
 1. Quitar las tres líneas de `.git/info/exclude` de dotfiles y los enlaces de `~/.config`.
-2. Copiar `config/aerospace`, `config/sketchybar` y `config/borders` a
-
-   `~/Repos/dotfiles/config/`.
-
-3. Pasar `scripts/` a `install/` de dotfiles y `versions.toml` a sus tablas, con las
-
-   pruebas que pida su suite.
-
+2. Copiar `config/aerospace`, `config/sketchybar` y `config/borders` a `~/Repos/dotfiles/config/`.
+3. Pasar `scripts/` a `install/` de dotfiles y `versions.toml` a sus tablas, con las pruebas que pida su suite.
 4. Añadir a `config/main/inventory.csv` una fila por pieza, con su celda de macOS.
 5. Comprobar que los `defaults` del bloque 7 ya están en `config/defaults/keys.toml`.
 6. Archivar este repo en GitHub.

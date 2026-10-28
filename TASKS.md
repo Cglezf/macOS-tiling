@@ -27,6 +27,11 @@ Cada tarea se cierra con lo medido en el Mac (versión, comando y salida), no co
 
   mover ventana con Option+Shift+número, foco con Option+flechas.
 
+  Nota, por verificar antes de escribirla: con teclado en español Option+tecla escribe
+  caracteres (¡, ¿, @, la tilde muerta) y estos atajos se los quitarían. Primero lo
+  nativo (Ajustes del Sistema, Teclado, Teclas modificadoras, o dos modificadores);
+  Karabiner solo si eso no basta (9.1).
+
 - [ ] 3.2 Probar el acomodo de ventanas nuevas (`tiles`, `accordion`, normalización) y
 
   decidir si basta frente a fair y dwindle de mango.
@@ -75,6 +80,19 @@ Cada tarea se cierra con lo medido en el Mac (versión, comando y salida), no co
 
 - [ ] 8.2 Una semana de uso sin tocar la configuración.
 - [ ] 8.3 Pasar a dotfiles y archivar este repo (README, «Cómo se hace el traslado»).
+
+## 9. Complementos
+
+Regla: primero la función nativa de macOS; un programa solo entra si lo nativo no basta,
+y se dice qué le faltó.
+
+- [ ] 9.1 Karabiner con la hyper key, antes de la tarea 3.1, solo si la nota de 3.1 lo pide.
+- [ ] 9.2 Ice, junto a la tarea 4.2, si se decide convivir con la barra nativa.
+- [ ] 9.3 Probar el Spotlight de Tahoe (acciones, portapapeles, atajos) antes de pensar en
+
+  Raycast.
+
+- [ ] 9.4 AltTab, para evaluarlo durante la semana de uso (8.2).
 
 ## Atajos
 

@@ -163,6 +163,7 @@ Homebrew, así que esta parte no está documentada por los autores.
 | [OmniWM](https://github.com/BarutSRB/OmniWM) | Candidato frente a AeroSpace (tarea 3.5): GPL-2.0, scroller estilo niri y dwindle estilo Hyprland por escritorio, barra propia, TOML en `~/.config/omniwm/`, zip de Releases, macOS 26+. Pide «Displays have separate Spaces» activado |
 | [Glide](https://github.com/glide-wm/glide) ([web](https://glidewm.org/)) | Segundo candidato (tarea 3.5): Rust, MIT o Apache-2.0, TOML en `~/.config/glide/`, DMG en Releases. Trabaja sobre los Spaces nativos y se activa por escritorio |
 | [HyprMac de zacharytgray](https://github.com/zacharytgray/HyprMac) | Solo ideas: dwindle propio en Swift, MIT; enlace con SketchyBar por `state.json` y `hyprmac://`. Configuración JSON fuera de XDG |
+| [HyperMac de chrisjaimyantony](https://github.com/chrisjaimyantony/HyperMac) | Solo ideas, en alfa (v0.2, Swift, MIT): animaciones con curva Quartic Ease-Out a 60 FPS; hoy solo maestro-pila, sin archivo de configuración ni binarios |
 | [HyprSpace de Li-RC](https://github.com/Li-RC/HyprSpace) | Solo ideas: fork de AeroSpace (v0.1.0, sin notarizar) con dwindle, pestañas, tira de escritorios y bordes |
 | [Fork dwindle de LDGerrits](https://github.com/LDGerrits/AeroSpace) | Solo ideas: `new-window-split = 'dwindle'` sobre AeroSpace; sin binarios ni PR al original |
 | [aether](https://github.com/viniciusbregoli/aether) y [skyland](https://github.com/waxdred/skyland) | Solo ideas: el modelo de AeroSpace con dwindle, animaciones y borde del foco. aether no declara licencia |

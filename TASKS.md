@@ -31,7 +31,7 @@ Cada tarea se cierra con lo medido en el Mac (versión, comando y salida), no co
 
 - [ ] 4.1 Escritorios de AeroSpace en la barra (idea: `items/spaces.sh` de omerxx).
 - [ ] 4.2 Decidir entre ocultar la barra nativa o convivir con ella (en un Mac con muesca).
-- [ ] 4.3 iStat Menus: probar los alias de SketchyBar (`--add alias`) frente a plugins propios de CPU, memoria y batería.
+- [ ] 4.3 iStat Menus: probar los alias de SketchyBar (`--add alias`) frente a plugins propios de CPU, memoria y batería. Vorssaint como tercera opción, sin su módulo de ventanas (README, referencias).
 - [x] 4.4 Paleta Breeze Dark en `config/sketchybar/colors.sh`, copiada de la fila `breeze_dark` de `config/main/palettes.csv` de dotfiles (2026-10-28; `bash -n` en Linux con bash 5, sin medir con el 3.2 del Mac). Al trasladar, se genera desde esa tabla.
 
 ## 5. JankyBorders

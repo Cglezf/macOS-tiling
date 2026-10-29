@@ -119,6 +119,7 @@ Pendiente de medir en el Mac: el nombre exacto de los objetivos de `make` y la r
 | [HyprSpace de Li-RC](https://github.com/Li-RC/HyprSpace) | Solo ideas: fork de AeroSpace (v0.1.0, sin notarizar) con dwindle, pestañas, tira de escritorios y bordes |
 | [Fork dwindle de LDGerrits](https://github.com/LDGerrits/AeroSpace) | Solo ideas: `new-window-split = 'dwindle'` sobre AeroSpace; sin binarios ni PR al original |
 | [aether](https://github.com/viniciusbregoli/aether) y [skyland](https://github.com/waxdred/skyland) | Solo ideas: el modelo de AeroSpace con dwindle, animaciones y borde del foco. aether no declara licencia |
+| [Vorssaint](https://github.com/vorssaint/vorssaint-utils) | No sustituye a SketchyBar: son módulos dentro de la barra nativa, configurados solo por la interfaz y sin CLI ni eventos para un gestor. Sirve frente a iStat Menus (tarea 4.3): CPU, GPU, memoria, temperaturas, batería y red. GPL-3.0, DMG notarizado, macOS 14+ en Apple Silicon. Trae acomodo de ventanas propio: hay que desinstalar ese módulo si convive con un gestor en mosaico |
 | [Hyperkey](https://hyperkey.app/) | Hyper key en una app pequeña y gratuita, alternativa a Karabiner para la tarea 9.1. Ojo: un reporte de [MacGeneration](https://www.macg.co/macos/2026/02/macos-264-peut-bloquer-les-methodes-traditionnelles-pour-activer-lhyper-key-307029) dice que las betas de macOS 26.4 rompían los métodos tradicionales |
 
 ## Reglas para que el traslado a dotfiles sea transparente

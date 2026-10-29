@@ -25,6 +25,7 @@ Copiar esta tabla por gestor en `TASKS.md`, tarea 3.5, con lo visto:
 | Cambiar de escritorio y mover ventanas solo con teclado | |
 | ¿Algún atajo choca con macOS o con una app? | |
 | CPU en reposo (Monitor de Actividad) | |
+| Retraso al cambiar de escritorio y al abrir una ventana, con 15 o más ventanas abiertas (a ojo: inmediato, se nota, molesta) | |
 | Fallos o ventanas que se escapan del mosaico | |
 
 ## 1. komorebi for Mac

@@ -25,14 +25,14 @@ Cada tarea se cierra con lo medido en el Mac (versión, comando y salida), no co
 - [ ] 3.2 Probar el acomodo de ventanas nuevas (`tiles`, `accordion`, normalización) y decidir si basta frente a fair y dwindle de mango.
 - [ ] 3.3 Reglas por aplicación (`on-window-detected`): flotantes y escritorio fijo, como `windowrules.csv` de dotfiles (Zed en el 3).
 - [ ] 3.4 Probar con dos pantallas: escritorios por monitor.
-- [ ] 3.5 Junto a la 3.2, probar en la cuenta `tiling` OmniWM frente a AeroSpace: trae scroller (estilo niri) y dwindle (estilo Hyprland) por escritorio, como mango; TOML en `~/.config/omniwm/`, zip de Releases, macOS 26+. Glide como segundo candidato (TOML en `~/.config/glide/`, usa los Spaces nativos). Si gana otro, cambian la 7.1, el bloque 4 (OmniWM trae barra) y quizá sobra JankyBorders: decidirlo antes de escribir configuración. Comparación previa, sin instalar, en `docs/comparativa-gestores.md` (2026-10-28), ampliada a once gestores con los criterios del usuario: fair, dwindle y center_tile por teclado, y nunca desactivar SIP. Orden de prueba: komorebi for Mac (el único que nombra los tres), Amethyst y KiwiDesk.
+- [ ] 3.5 Junto a la 3.2, probar en la cuenta `tiling` OmniWM frente a AeroSpace: trae scroller (estilo niri) y dwindle (estilo Hyprland) por escritorio, como mango; TOML en `~/.config/omniwm/`, zip de Releases, macOS 26+. Glide como segundo candidato (TOML en `~/.config/glide/`, usa los Spaces nativos). Si gana otro, cambian la 7.1, el bloque 4 (OmniWM trae barra) y quizá sobra JankyBorders: decidirlo antes de escribir configuración. Comparación previa, sin instalar, en `docs/comparativa-gestores.md` (2026-10-28), ampliada a once gestores con los criterios del usuario: fair, dwindle y center_tile por teclado, y nunca desactivar SIP. Orden de prueba: komorebi for Mac (el único que nombra los tres), Amethyst y KiwiDesk, con los pasos de `docs/guion-prueba-gestores.md`.
 
 ## 4. SketchyBar
 
 - [ ] 4.1 Escritorios de AeroSpace en la barra (idea: `items/spaces.sh` de omerxx).
 - [ ] 4.2 Decidir entre ocultar la barra nativa o convivir con ella (en un Mac con muesca).
 - [ ] 4.3 iStat Menus: probar los alias de SketchyBar (`--add alias`) frente a plugins propios de CPU, memoria y batería.
-- [ ] 4.4 Paleta Breeze Dark, la misma de dotfiles.
+- [x] 4.4 Paleta Breeze Dark en `config/sketchybar/colors.sh`, copiada de la fila `breeze_dark` de `config/main/palettes.csv` de dotfiles (2026-10-28; `bash -n` en Linux con bash 5, sin medir con el 3.2 del Mac). Al trasladar, se genera desde esa tabla.
 
 ## 5. JankyBorders
 

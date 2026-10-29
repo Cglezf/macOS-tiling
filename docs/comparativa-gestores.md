@@ -80,6 +80,6 @@ Orden propuesto, de más a menos parecido a mango:
 2. **Amethyst**: `BSP` y `3Column-Middle`, y si los fallos #1812 y #1849 aparecen en el uso diario.
 3. **KiwiDesk**: solo si los dos anteriores fallan; primero confirmar sus layouts.
 4. **ZIL**: dwindle y center_tile sin fair.
-5. **facet**, si el usuario lo añade al guion: los tres layouts, pero compilado y con skhd.
+5. **facet**: los tres layouts, pero compilado y con skhd.
 
 Para cada uno: escribir los tres layouts con atajos de teclado, abrir y cerrar ventanas durante una sesión de trabajo y anotar lo que falle. La decisión cambia la 7.1 (el ajuste de Spaces) y el bloque 4.

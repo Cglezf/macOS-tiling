@@ -1,6 +1,6 @@
 # Guion de prueba de gestores (tarea 3.5)
 
-Para la cuenta `tiling` del Mac. Prueba komorebi for Mac, Amethyst, KiwiDesk y ZIL, uno a la vez y en ese orden, sin Homebrew: binario de GitHub Releases o compilación. Preparado el 2026-10-28 desde la documentación de cada uno; lo marcado «sin verificar» se confirma en el Mac. Por qué estos tres y no otros: `docs/comparativa-gestores.md`.
+Para la cuenta `tiling` del Mac. Prueba komorebi for Mac, Amethyst, KiwiDesk, ZIL y facet, uno a la vez y en ese orden, sin Homebrew: binario de GitHub Releases o compilación. Preparado el 2026-10-28 desde la documentación de cada uno; lo marcado «sin verificar» se confirma en el Mac. Por qué estos tres y no otros: `docs/comparativa-gestores.md`.
 
 ## Antes de empezar
 
@@ -169,6 +169,56 @@ Atajos de fábrica, con Ctrl+Option+Cmd: T cambia de layout, R reacomoda, J y K 
 Para la barra: CLI `zil` con socket (`zil show`, `zil doctor`); no menciona SketchyBar.
 
 Desinstalar (no hay guía): salir de ZIL, borrar la app y `~/.config/zil/`, y quitar el permiso de Accesibilidad.
+
+## 5. facet
+
+Añadido el 2026-10-28: el único, junto con komorebi, que tiene los tres layouts (`grid`, `spiral` o `bsp`, `master-center`). MIT, macOS 26+ solo Apple Silicon. Proyecto de un solo autor; su binario se publica solo en un tap de Homebrew, así que aquí se compila. Necesita skhd para los atajos, como komorebi.
+
+Compilar (con Xcode o las Command Line Tools; `swift test` sí exige Xcode):
+
+```zsh
+git clone https://github.com/akira-toriyama/facet ~/Repos/macOS-tiling/build/facet
+cd ~/Repos/macOS-tiling/build/facet
+git log -1 --format='%h %cs'   # anotar el commit probado
+./run.sh                       # compila en release y lanza Facet.app
+ln -sf "$PWD/.build/release/facet" ~/.local/bin/facet
+```
+
+Dónde deja `Facet.app`: sin verificar; anotarlo. Permisos: Accesibilidad; Grabación de pantalla solo para las miniaturas de su vista de rejilla. Trabaja sobre los Spaces nativos: `desktop.N` es la posición del escritorio en Mission Control.
+
+Configuración, `~/.config/facet/config.toml` (facet nunca lo reescribe). Si existe algún bloque `[[desktop.N.section]]`, solo gestiona los escritorios que lo tengan:
+
+```toml
+[[desktop.1.section]]
+label = "fair"
+layout = "grid"
+
+[[desktop.2.section]]
+label = "dwindle"
+layout = "spiral"
+
+[[desktop.3.section]]
+label = "center"
+layout = "master-center"
+```
+
+Forma de las claves tomada de su README; que tres escritorios con una sección cada uno funcionen así: sin verificar. Crear antes tres Spaces en Mission Control.
+
+Atajos de prueba, en un skhdrc propio (`~/.config/facet/skhdrc`, ruta elegida aquí):
+
+```text
+ctrl + alt - g : facet workspace --layout grid
+ctrl + alt - d : facet workspace --layout spiral
+ctrl + alt - c : facet workspace --layout master-center
+ctrl + alt - 1 : facet workspace --focus 1
+ctrl + alt - 2 : facet workspace --focus 2
+ctrl + alt - 3 : facet workspace --focus 3
+ctrl + shift + alt - 1 : facet window --move-to 1
+```
+
+No documenta foco por dirección (izquierda, derecha): anotar si hace falta para el uso diario. Para la barra: `facet query` y `facet query --windows` (JSON); no hay eventos, así que SketchyBar tendría que preguntar cada cierto tiempo.
+
+Desinstalar: `facet --quit` (devuelve las ventanas ocultas; si se cayó, `facet --rescue`), `./stop.sh`, matar skhd, borrar el enlace de `~/.local/bin`, `build/facet` y `~/.config/facet/`, y quitar los permisos.
 
 ## Al terminar
 

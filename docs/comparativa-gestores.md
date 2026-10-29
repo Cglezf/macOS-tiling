@@ -16,7 +16,7 @@ Y los de este repo: mosaico automático (no solo acomodar, como Magnet), macOS 2
 
 | Gestor | fair | dwindle | center_tile | SIP | Estado |
 | --- | --- | --- | --- | --- | --- |
-| [komorebi for Mac](https://github.com/LGUG2Z/komorebi-for-mac) | `Grid` (v) | `BSP` (v) | `UltrawideVerticalStack` (v), por confirmar en uso | Solo la promesa del autor de que no hace falta | v0.1.1, 2026-05-03; Tahoe sin prueba; licencia de fuente visible, sin uso comercial |
+| [komorebi for Mac](https://github.com/LGUG2Z/komorebi-for-mac) | `Grid` (v) | `BSP` (v) | `UltrawideVerticalStack` (v), por confirmar en uso | Solo la promesa del autor de que no hace falta | v0.1.1, 2026-05-03; Tahoe sin prueba; licencia de fuente visible: uso personal sí, en el trabajo no (ver Lectura) |
 | [Amethyst](https://github.com/ianyh/Amethyst) | No (`Column` y `Row` reparten en una sola dimensión) | `BSP` (v), sin espiral documentada | `3Column-Middle` (v) | No lo pide (v) | v0.24.3, 2026-04-02; MIT; fallos abiertos en Tahoe (#1812, #1849) |
 | [KiwiDesk](https://github.com/KiwiCanopy/KiwiDesk) | `Grid`, según un tercero | `BSP`, según un tercero | No | «Accessibility only, never SIP» (v) | v4.0.0, 2026-10-28; BSL 1.1 (pasa a MIT a los 4 años); macOS 14+; Tahoe sin prueba; Lua opcional, el resto en su app de Ajustes |
 | [Rift](https://github.com/acsandmann/rift) | No | `BSP` (v) | Maestro-pila estilo dwm (v); centro no | No lo pide (v) | v0.7.1, 2026-10-27; Apache-2.0; TOML recargable; IPC con ejemplo de SketchyBar; usuarios en Tahoe 26.5 y 26.6 |
@@ -30,7 +30,7 @@ Y los de este repo: mosaico automático (no solo acomodar, como Magnet), macOS 2
 
 ## Lectura
 
-- **Solo komorebi for Mac tiene nombre para los tres.** Ese es su atractivo; los riesgos son que va en la v0.1.1, que nadie ha probado Tahoe, que lo de SIP es una promesa del autor y que su licencia prohíbe el uso comercial: hay que leerla frente al uso en el trabajo antes de adoptarlo.
+- **Solo komorebi for Mac tiene nombre para los tres.** Ese es su atractivo; los riesgos son que va en la v0.1.1, que nadie ha probado Tahoe, y que lo de SIP es una promesa del autor. Licencia (Komorebi License 2.0.0, leída el 2026-10-28): permite «personal use for research, experiment, and testing for the benefit of public knowledge, personal study, [...] hobby projects» sin aplicación comercial prevista, y su README excluye «using komorebi at work». El Mac es de uso personal, estudio e investigación, sin clases: la prueba y el estudio entran; la investigación hecha como parte de un empleo es zona gris. Si se adopta para eso, se confirma con el autor o se paga la licencia comercial (10 USD al mes o 110 al año, solo Mac).
 - **Amethyst cubre dwindle y center_tile** con SIP activo, gratis y con años de historia. Le falta fair y arrastra fallos en Tahoe.
 - **Nadie más tiene un center_tile real.** Rift y skyland tienen maestro-pila; skyland con orientación al centro, pero sin probarse en la 26.
 - **OmniWM pierde peso**: su fuerte es el scroller, que el usuario casi no usa.
@@ -60,7 +60,7 @@ Y los de este repo: mosaico automático (no solo acomodar, como Magnet), macOS 2
 
 Orden propuesto, de más a menos parecido a mango:
 
-1. **komorebi for Mac**: comprobar que `Grid`, `BSP` y `UltrawideVerticalStack` se ven como fair, dwindle y center_tile, y que no pide SIP. Antes, leer su licencia.
+1. **komorebi for Mac**: comprobar que `Grid`, `BSP` y `UltrawideVerticalStack` se ven como fair, dwindle y center_tile, y que no pide SIP. La prueba entra en su licencia.
 2. **Amethyst**: `BSP` y `3Column-Middle`, y si los fallos #1812 y #1849 aparecen en el uso diario.
 3. **KiwiDesk**: solo si los dos anteriores fallan; primero confirmar sus layouts.
 

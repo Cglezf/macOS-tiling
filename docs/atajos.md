@@ -4,7 +4,7 @@ Punto de partida del análisis final de atajos. **No se usa para elegir gestor (
 
 Fuente: `config/main/keybinds.csv` de `~/Repos/dotfiles`, citado por ruta y no copiado. Leído el 2026-10-28: 158 filas, todas clasificadas abajo (91 del gestor, 2 de gestos, 7 de lanzar programas, 30 nativas de macOS, 8 por decidir, 5 solo de Linux y 15 sin tecla). La columna «Tecla en mango» es la `decision` del CSV. Al trasladar a dotfiles, esta tabla es la que se cruza con el CSV.
 
-`SUPER` es la tecla Windows del equipo Linux. Qué modificador la sustituye en el Mac lo decide la 3.1: Cmd choca con los atajos de las aplicaciones y Option con los caracteres del teclado español.
+`SUPER` es la tecla del sistema: Windows en un teclado de PC y Command en uno de Mac; algunos teclados externos la rotulan Meta, Logo o Win/Cmd. Qué modificador hace ese papel en el Mac lo decide la 3.1: Cmd choca con los atajos de las aplicaciones y Option con los caracteres del teclado español.
 
 ## Del gestor de ventanas
 

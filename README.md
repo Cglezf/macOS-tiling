@@ -135,7 +135,7 @@ Todo lo de este repo se escribe ya con las convenciones de `~/Repos/dotfiles`. A
 
 1. **Versiones y URL en un solo archivo de datos**, `versions.toml` (versión de AeroSpace, etiqueta o commit de SketchyBar y JankyBorders). En dotfiles pasan a sus tablas; los scripts nunca llevan una versión escrita dentro.
 2. **Colores en un solo archivo**, `config/sketchybar/colors.sh`, con la paleta Breeze Dark de dotfiles. JankyBorders y AeroSpace no repiten un color: lo toman de ahí o llevan un comentario que diga de qué variable sale.
-3. **Atajos en un solo sitio**, el bloque `[mode.main.binding]` de `aerospace.toml`, con un comentario por grupo. Cada atajo se anota en la tabla «Atajos» de `TASKS.md` con su equivalente de mango; esa tabla es la que se cruza con `config/main/keybinds.csv`.
+3. **Atajos en un solo sitio**, el bloque `[mode.main.binding]` de `aerospace.toml`, con un comentario por grupo. Cada atajo se anota en `docs/atajos.md` con su equivalente de mango; esa tabla es la que se cruza con `config/main/keybinds.csv` de dotfiles (tarea 10.1).
 4. **Sin rutas de usuario escritas**: `$HOME`, `~` o `${XDG_CONFIG_HOME:-$HOME/.config}`, nunca `/Users/<nombre>`. El pre-commit de dotfiles rechaza esas rutas.
 
 ### Scripts

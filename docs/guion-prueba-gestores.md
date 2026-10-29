@@ -1,6 +1,6 @@
 # Guion de prueba de gestores (tarea 3.5)
 
-Para la cuenta `tiling` del Mac. Prueba komorebi for Mac, Amethyst y KiwiDesk, uno a la vez y en ese orden, sin Homebrew: binario de GitHub Releases o compilación. Preparado el 2026-10-28 desde la documentación de cada uno; lo marcado «sin verificar» se confirma en el Mac. Por qué estos tres y no otros: `docs/comparativa-gestores.md`.
+Para la cuenta `tiling` del Mac. Prueba komorebi for Mac, Amethyst, KiwiDesk y ZIL, uno a la vez y en ese orden, sin Homebrew: binario de GitHub Releases o compilación. Preparado el 2026-10-28 desde la documentación de cada uno; lo marcado «sin verificar» se confirma en el Mac. Por qué estos tres y no otros: `docs/comparativa-gestores.md`.
 
 ## Antes de empezar
 
@@ -146,6 +146,29 @@ Atajos de fábrica, ya con Ctrl+Option: ⌃⌥C cicla el layout, ⌃⌥ y una fl
 Para la barra: `kiwidesk get_state` (JSON) y `kiwidesk subscribe space_change layout_change`; tiene una receta oficial para SketchyBar.
 
 Desinstalar (no hay guía oficial): `kiwidesk service stop`, quitar el ítem de inicio de sesión, borrar la app, el enlace de `~/.local/bin`, `~/.config/KiwiDesk/` y `~/Library/Application Support/KiwiDesk/`.
+
+## 4. ZIL
+
+Añadido el 2026-10-28 tras el barrido de Hacker News y la web. Gratuito («given away free and is not sold»), notarizado, «runs with SIP on»; licencia y código fuente sin publicar. Pensado para monitores anchos.
+
+Instalar (v0.1.86, el único artefacto es un zip):
+
+```zsh
+cd ~/Repos/macOS-tiling/build
+# Descargar Zil-0.1.86.zip de https://zil.daystra.com
+ditto -x -k Zil-0.1.86.zip zil
+mv zil/*.app ~/Applications/   # nombre exacto de la app: sin verificar
+```
+
+Su web lo abre desde `/Applications/`; si en `~/Applications/` falla, anotarlo y moverlo. Permiso: Accesibilidad. Trae nueve escritorios propios por pantalla; su relación con los Spaces nativos no la documenta.
+
+Configuración: el primer arranque escribe `~/.config/zil/zil.toml` y lo recarga al guardar. Layouts: **Dwindle** y **Master-centre**, que persisten por escritorio; abre en Master-centre los escritorios más anchos que 2.2:1. No tiene fair.
+
+Atajos de fábrica, con Ctrl+Option+Cmd: T cambia de layout, R reacomoda, J y K mueven el foco (con Shift intercambian), 1..9 cambia de escritorio (con Shift mueve la ventana), X alterna flotante. Usan tres modificadores, no los Ctrl+Option del resto de la prueba: anotarlo, no cambiarlo, para medirlo como viene.
+
+Para la barra: CLI `zil` con socket (`zil show`, `zil doctor`); no menciona SketchyBar.
+
+Desinstalar (no hay guía): salir de ZIL, borrar la app y `~/.config/zil/`, y quitar el permiso de Accesibilidad.
 
 ## Al terminar
 
